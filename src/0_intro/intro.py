@@ -11,3 +11,6 @@ local()
 
 print(m)
 
+name = 'Raj'
+print(f'My name is {name}')
+

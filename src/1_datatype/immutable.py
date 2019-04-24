@@ -1,5 +1,6 @@
 def showImmutable():
     print("Strings===")
+    print('{0:=<10} | {1:.>20}'.format('Raj', 'Katipally'))
     print('This is single quotes')
     print("this is double quotes")
     print('''this triple quotes 
@@ -36,6 +37,7 @@ def showImmutable():
     a,b = b,a
     print('swapping with tuples::: ', a, b )
     print('querying in tuple::: ', 3 in multi_tuple)
+
 
 
 showImmutable()
