@@ -63,3 +63,10 @@ defaults()
 defaults()
 defaults([1,2], {'a':1})
 defaults()
+
+print('='*100)
+def args1(a,b,c):
+    print(a,b,c)
+
+values = (1,2,3)
+args1(*values)

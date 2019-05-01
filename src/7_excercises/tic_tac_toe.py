@@ -4,6 +4,7 @@ import itertools
 class TicTacToe:
     @staticmethod
     def draw_board(cells):
+        print('\n'*100)
         rows = '\n' + '-'*13 + '\n'
         for row in range(3):
             for col in range(13):
