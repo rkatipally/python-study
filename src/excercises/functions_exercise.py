@@ -1,11 +1,11 @@
-import math
+import math 
 from functools import reduce
 import string
 
 
 class FunctionsFun():
     def __init__(self):
-        print('Initilizing FunctionsFun!!')
+        print('Initializing FunctionsFun!!')
 
     @staticmethod
     def call_me(method_name, input):
@@ -18,10 +18,9 @@ class FunctionsFun():
             output = method(input)
         print(f'Input: {input}\nOutput: {output}')
 
-
     @staticmethod
     def calc_sphere_volume(radius):
-        return round((4*math.pi*radius**3)/3, 2)
+        return round((4 * math.pi * radius ** 3) / 3, 2)
 
     @staticmethod
     def range_check(num, low, high):
@@ -44,7 +43,7 @@ class FunctionsFun():
 
     @staticmethod
     def multiply(l):
-        return reduce((lambda x,y: x*y), l)
+        return reduce((lambda x, y: x * y), l)
 
     @staticmethod
     def palindrome(s):
@@ -62,6 +61,3 @@ FunctionsFun.call_me('unique_list', [1, 1, 1, 1, 2, 2, 3, 3, 3, 3, 4, 5])
 FunctionsFun.call_me('multiply', [1, 2, 3, 5, 6])
 FunctionsFun.call_me('palindrome', 'ABCBA')
 FunctionsFun.call_me('is_pangram', 'The quick brown fox jumps over the lazy dog')
-
-
-
