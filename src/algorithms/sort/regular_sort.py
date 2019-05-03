@@ -5,6 +5,7 @@ def sort(list_to_sort):
                 temp = list_to_sort[i]
                 list_to_sort[i] = list_to_sort[j]
                 list_to_sort[j] = temp
+    return list_to_sort
 
 
 list_to_sort = [2,4,1,6,4,3]
