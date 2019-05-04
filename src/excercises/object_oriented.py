@@ -6,8 +6,11 @@ import unittest
 logging.basicConfig(format='%(asctime)s %(message)s', level=logging.INFO)
 logger = logging.getLogger()
 
+""" Object oriented module"""
+
 
 class BankAccount:
+    """ BankAccount class"""
 
     def __init__(self, name, balance):
         self.name = name
