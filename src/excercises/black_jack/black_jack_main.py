@@ -15,7 +15,7 @@ class Dealer(Enum):
 
 
 class BlackJack:
-    cards = []
+    deck = []
     cards_suit = {'A': 10, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 'J': 10, 'Q': 10, 'K': 10}
     player = {Player.NAME: '', Player.BALANCE: 0, Player.CURRENT_BET: 0, Player.HAND: []}
     dealer = {Dealer.HAND: []}
@@ -82,14 +82,14 @@ class BlackJack:
 
     def deal_cards(self, is_player=False, is_dealer=False):
         if is_player:
-            self.player[Player.HAND].append(self.cards.pop())
+            self.player[Player.HAND].append(self.deck.pop())
         elif is_dealer:
-            self.dealer[Dealer.HAND].append(self.cards.pop())
+            self.dealer[Dealer.HAND].append(self.deck.pop())
         else:
-            self.player[Player.HAND].append(self.cards.pop())
-            self.dealer[Dealer.HAND].append(self.cards.pop())
-            self.player[Player.HAND].append(self.cards.pop())
-            self.dealer[Dealer.HAND].append(self.cards.pop())
+            self.player[Player.HAND].append(self.deck.pop())
+            self.dealer[Dealer.HAND].append(self.deck.pop())
+            self.player[Player.HAND].append(self.deck.pop())
+            self.dealer[Dealer.HAND].append(self.deck.pop())
 
     def ask_for_bet(self):
         while True:
@@ -111,9 +111,9 @@ class BlackJack:
     def generate_cards(self):
         for i in range(4):
             for key in self.cards_suit.keys():
-                self.cards.append(key)
+                self.deck.append(key)
         # shuffle the cards
-        random.shuffle(self.cards)
+        random.shuffle(self.deck)
 
     def show_hands(self, is_stand):
         if is_stand:

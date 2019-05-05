@@ -23,13 +23,14 @@ class TicTacToe:
     def is_game_won(choices):
         for player, positions in choices.items():
             for comb in itertools.combinations(positions, 3):
+                comb = sorted(comb)
                 if comb[0] - comb[1] == comb[1] - comb[2]:
                     return True
         return False
 
     @staticmethod
     def is_valid_choice(choices, cells, selected):
-        if not (1 <= selected < len(cells)):
+        if not (1 <= selected <= len(cells)):
             return False
         for player, positions in choices.items():
             for filled_cell in positions:
