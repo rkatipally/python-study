@@ -16,7 +16,7 @@ class Dealer(Enum):
 
 class BlackJack:
     deck = []
-    cards_suit = {'A': 10, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 'J': 10, 'Q': 10, 'K': 10}
+    cards_suit = {'A': 11, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 'J': 10, 'Q': 10, 'K': 10}
     player = {Player.NAME: '', Player.BALANCE: 0, Player.CURRENT_BET: 0, Player.HAND: []}
     dealer = {Dealer.HAND: []}
 
